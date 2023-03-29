@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - 5000:5000
+      - 7000:5000
     restart: always
     command: npm run start:prod
     network_mode: bridge
