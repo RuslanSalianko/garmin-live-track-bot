@@ -9,5 +9,4 @@ services:
       - 5000:5000
     restart: always
     command: npm run start:prod
-    env_file: .env
     network_mode: bridge
