@@ -26,7 +26,7 @@ export class MessageService {
     }
   }
 
-  @Cron(CronExpression.EVERY_5_MINUTES)
+  @Cron(CronExpression.EVERY_MINUTE)
   async pushLinks(): Promise<void> {
     const links = await this.mailService.fechLinksLiveTrack();
     const userSend = await this.userService.findBySendMessage();
