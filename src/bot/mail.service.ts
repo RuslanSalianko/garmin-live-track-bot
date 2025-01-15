@@ -21,7 +21,7 @@ export class MailService {
     };
     try {
       const connection = await imaps.connect(config);
-      await connection.openBox('Garmin');
+      await connection.openBox(this.configService.get('MAIL_DIR'));
       const searchCriteria = ['UNSEEN'];
       const fetchOptions = {
         bodies: ['HEADER', 'TEXT'],
